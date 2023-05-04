@@ -1,13 +1,5 @@
-import css from "./ContactListItem.module.css";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
-import PropTypes from "prop-types";
-
-ContactListItem.propTypes = {
-  name: PropTypes.string,
-  number: PropTypes.string,
-  id: PropTypes.string,
-};
+import { deleteContact } from "../redux/contactsSlice";
 
 export default function ContactListItem({ name, number, id }) {
   const dispatch = useDispatch();
@@ -17,7 +9,7 @@ export default function ContactListItem({ name, number, id }) {
   };
 
   return (
-    <li className={css.contactItem}>
+    <li>
       {name}: {number}
       <button type="button" onClick={handleDelete}>
         Delete

@@ -1,6 +1,6 @@
-import ContactForm from "./ContactForm/ContactForm";
-import ContactList from "./ContactList/ContactList";
-import Filter from "./Filter/Filter";
+import ContactForm from "./components/ContactForm";
+import ContactList from "./components/ContactList";
+import Filter from "./components/Filter";
 import css from "./App.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -9,7 +9,7 @@ import {
   setFilter,
   selectContacts,
   selectFilter,
-} from "../redux/contactsSlice";
+} from "./redux/contactsSlice";
 
 export default function App() {
   const contacts = useSelector(selectContacts);

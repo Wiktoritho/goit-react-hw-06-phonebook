@@ -1,11 +1,6 @@
-import css from "./Filter.module.css";
-import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
-import { selectFilter, setFilter } from "../../redux/contactsSlice";
-
-PropTypes.propTypes = {
-  value: PropTypes.string,
-};
+import { selectFilter, setFilter } from "../redux/contactsSlice";
+import css from "../App.module.css"
 
 export default function Filter() {
   const value = useSelector(selectFilter);
@@ -16,9 +11,11 @@ export default function Filter() {
   };
 
   return (
-    <label className={css.filter}>
+    <div className={css.form}>
+      <label>
       Find contacts by name
+      </label>
       <input type="text" value={value} onChange={handleChange} />
-    </label>
+    </div>
   );
 }

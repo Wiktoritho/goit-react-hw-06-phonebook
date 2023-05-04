@@ -1,8 +1,0 @@
-.filter {
-  display: flex;
-  flex-direction: column;
-}
-.filter input {
-  width: 50%;
-  border: none;
-}
